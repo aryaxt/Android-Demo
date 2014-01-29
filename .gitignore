@@ -1,0 +1,13 @@
+# Android studio
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+
+debug.properties
+local.properties
+
+lint-report.html
+lint-report_files/

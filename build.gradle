@@ -1,0 +1,26 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:0.8.0'
+  }
+}
+
+allprojects {
+
+  rootProject.buildscript.repositories.each {
+    repositories.add(it)
+  }
+
+  tasks.withType(Compile) {
+    options.encoding = "UTF-8"
+  }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.10'
+}
+
+apply plugin: 'android-reporting'
+
