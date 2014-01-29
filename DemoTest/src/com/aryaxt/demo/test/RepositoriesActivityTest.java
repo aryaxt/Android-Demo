@@ -9,17 +9,12 @@
 package com.aryaxt.demo.test;
 
 import static org.junit.Assert.*;
-
 import java.util.List;
-
-import junit.framework.Assert;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
-
 import retrofit.Callback;
 
 import com.aryaxt.demo.helper.IActivityStarter;
@@ -60,6 +55,7 @@ public class RepositoriesActivityTest extends BaseTest {
 		Mockito.verify(progressBuilder).show(Mockito.anyString(), Mockito.anyString());
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@Test
 	public void verifyCorrectUsernameIsPassedWhenFetchingRepositories() {
 		
@@ -67,6 +63,7 @@ public class RepositoriesActivityTest extends BaseTest {
 		getActivity(RepositoriesActivity.class);
 		
 		ArgumentCaptor<String> usernameArg = ArgumentCaptor.forClass(String.class);
+		@SuppressWarnings("unchecked")
 		ArgumentCaptor<Callback<List<Repository>>> callBackArg = ArgumentCaptor.forClass((Class) Callback.class);
 		Mockito.verify(githubService).GetRepositories(usernameArg.capture(), callBackArg.capture());
 		assertTrue(usernameArg.getValue().equals("JakeWharton"));
