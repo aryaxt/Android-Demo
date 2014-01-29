@@ -7,7 +7,6 @@ import java.util.UUID;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.client.OkClient;
-import retrofit.http.Path;
 import com.aryaxt.demo.service.interfaces.IGithubService;
 import com.aryaxt.demo.srrvice.models.User;
 import com.aryaxt.demo.srrvice.models.Repository;
@@ -22,28 +21,28 @@ public class GithubService implements IGithubService {
 	@Inject
 	public GithubService() {
 		
+		OkHttpClient okHttpClient = new OkHttpClient();
+	    File cacheDir = new File(System.getProperty("java.io.tmpdir"), UUID.randomUUID().toString());
+		
 		try {
-			OkHttpClient okHttpClient = new OkHttpClient();
-		    File cacheDir = new File(System.getProperty("java.io.tmpdir"), UUID.randomUUID().toString());
 			okHttpClient.setResponseCache(new HttpResponseCache(cacheDir, 1024));
-			
-		    RestAdapter restAdapter = new RestAdapter.Builder()
-		        .setClient(new OkClient(okHttpClient))
-		        .setServer("https://api.github.com")
-		        .build();
-		    
-		    service = restAdapter.create(IGithubService.class);
-		    
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+	    RestAdapter restAdapter = new RestAdapter.Builder()
+        	.setClient(new OkClient(okHttpClient))
+        	.setServer("https://api.github.com")
+        	.build();
+    
+	    service = restAdapter.create(IGithubService.class);
 	}
 	
 	public void GetContributors(String username, String repo, Callback<List<User>> callBack) {
 		service.GetContributors(username, repo, callBack);
 	}
 	
-	public void GetRepositories(@Path("user") String username, Callback<List<Repository>> callBack) {
+	public void GetRepositories(String username, Callback<List<Repository>> callBack) {
 		service.GetRepositories(username, callBack);
 	}
 }
