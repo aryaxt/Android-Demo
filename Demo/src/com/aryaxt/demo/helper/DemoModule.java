@@ -1,7 +1,9 @@
 package com.aryaxt.demo.helper;
 
 import com.aryaxt.demo.service.implementations.GithubService;
+import com.aryaxt.demo.service.implementations.RestServiceProvider;
 import com.aryaxt.demo.service.interfaces.IGithubService;
+import com.aryaxt.demo.service.interfaces.IRestServiceProvider;
 import com.google.inject.AbstractModule;
 
 public class DemoModule extends AbstractModule {
@@ -17,5 +19,6 @@ public class DemoModule extends AbstractModule {
 		
 		// Services
 		bind(IGithubService.class).to(GithubService.class);
+		bind(IRestServiceProvider.class).to(RestServiceProvider.class);
 	}
 }

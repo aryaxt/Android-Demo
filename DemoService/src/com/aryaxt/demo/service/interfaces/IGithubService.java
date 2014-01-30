@@ -12,8 +12,8 @@ import com.aryaxt.demo.srrvice.models.Repository;
 public interface IGithubService {
 
 	@GET("/repos/{user}/{repo}/contributors")
-	void GetContributors(@Path("user") String username, @Path("repo") String repo, Callback<List<User>> callBack);
+	void getContributors(@Path("user") String username, @Path("repo") String repo, Callback<List<User>> callBack);
 	
 	@GET("/users/{user}/repos")
-	void GetRepositories(@Path("user") String username, Callback<List<Repository>> callBack);
+	void getRepositories(@Path("user") String username, Callback<List<Repository>> callBack);
 }
