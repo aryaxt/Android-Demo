@@ -5,8 +5,11 @@ import com.aryaxt.demo.helper.IActivityStarter;
 import com.aryaxt.demo.helper.IAlertBuilder;
 import com.aryaxt.demo.helper.IIntentProxy;
 import com.aryaxt.demo.helper.IProgressBuilder;
+import com.aryaxt.demo.service.implementations.RestServiceProvider;
 import com.aryaxt.demo.service.interfaces.IGithubService;
+import com.aryaxt.demo.service.interfaces.IRestServiceProvider;
 import com.google.inject.AbstractModule;
+import com.google.inject.Singleton;
 
 public class DemoTestModule extends AbstractModule {
 	
@@ -20,6 +23,7 @@ public class DemoTestModule extends AbstractModule {
     	bind(IIntentProxy.class).toInstance(Mockito.mock(IIntentProxy.class));
 		
 		// Services
+    	bind(IRestServiceProvider.class).toInstance(Mockito.mock(IRestServiceProvider.class));
 		bind(IGithubService.class).toInstance(Mockito.mock(IGithubService.class));
 	}
 }
