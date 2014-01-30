@@ -65,7 +65,7 @@ public class RepositoriesActivityTest extends BaseTest {
 		ArgumentCaptor<String> usernameArg = ArgumentCaptor.forClass(String.class);
 		@SuppressWarnings("unchecked")
 		ArgumentCaptor<Callback<List<Repository>>> callBackArg = ArgumentCaptor.forClass((Class) Callback.class);
-		Mockito.verify(githubService).GetRepositories(usernameArg.capture(), callBackArg.capture());
+		Mockito.verify(githubService).getRepositories(usernameArg.capture(), callBackArg.capture());
 		assertTrue(usernameArg.getValue().equals("JakeWharton"));
 	}
 }
