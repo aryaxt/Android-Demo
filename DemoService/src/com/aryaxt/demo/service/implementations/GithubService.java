@@ -4,8 +4,8 @@ import java.util.List;
 import retrofit.Callback;
 import com.aryaxt.demo.service.interfaces.IGithubService;
 import com.aryaxt.demo.service.interfaces.IRestServiceProvider;
-import com.aryaxt.demo.srrvice.models.User;
-import com.aryaxt.demo.srrvice.models.Repository;
+import com.aryaxt.demo.service.models.Repository;
+import com.aryaxt.demo.service.models.User;
 import com.google.inject.Inject;
 
 public class GithubService implements IGithubService {

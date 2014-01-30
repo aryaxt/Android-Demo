@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import com.aryaxt.demo.R;
 import com.aryaxt.demo.helper.AbstractAdapter;
-import com.aryaxt.demo.srrvice.models.User;
+import com.aryaxt.demo.service.models.User;
 import com.google.inject.Inject;
 import com.squareup.picasso.Picasso;
 

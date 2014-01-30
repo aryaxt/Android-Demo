@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.aryaxt.demo.R;
 import com.aryaxt.demo.helper.AbstractAdapter;
-import com.aryaxt.demo.srrvice.models.Repository;
+import com.aryaxt.demo.service.models.Repository;
 import com.google.inject.Inject;
 
 public class RepositoriesAdapter extends AbstractAdapter<Repository> {

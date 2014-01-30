@@ -20,7 +20,7 @@ import com.aryaxt.demo.helper.IIntentProxy;
 import com.aryaxt.demo.helper.IProgressBuilder;
 import com.aryaxt.demo.pages.contributors.ContributorsActivity;
 import com.aryaxt.demo.service.interfaces.IGithubService;
-import com.aryaxt.demo.srrvice.models.Repository;
+import com.aryaxt.demo.service.models.Repository;
 import com.google.inject.Inject;
 
 public class RepositoriesActivity extends RoboActivity {

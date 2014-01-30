@@ -24,7 +24,7 @@ import com.aryaxt.demo.helper.IProgressBuilder;
 import com.aryaxt.demo.pages.repositories.RepositoriesActivity;
 import com.aryaxt.demo.pages.repositories.RepositoriesAdapter;
 import com.aryaxt.demo.service.interfaces.IGithubService;
-import com.aryaxt.demo.srrvice.models.Repository;
+import com.aryaxt.demo.service.models.Repository;
 import com.aryaxt.demo.test.helpers.BaseTest;
 import com.google.inject.Inject;
 

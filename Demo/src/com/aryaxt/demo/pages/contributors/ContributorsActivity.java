@@ -6,8 +6,8 @@ import com.aryaxt.demo.R;
 import com.aryaxt.demo.helper.IAlertBuilder;
 import com.aryaxt.demo.helper.IProgressBuilder;
 import com.aryaxt.demo.service.interfaces.IGithubService;
-import com.aryaxt.demo.srrvice.models.Repository;
-import com.aryaxt.demo.srrvice.models.User;
+import com.aryaxt.demo.service.models.Repository;
+import com.aryaxt.demo.service.models.User;
 import com.google.inject.Inject;
 
 import roboguice.activity.RoboActivity;

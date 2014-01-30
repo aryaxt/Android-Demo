@@ -6,8 +6,8 @@ import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;
 
-import com.aryaxt.demo.srrvice.models.User;
-import com.aryaxt.demo.srrvice.models.Repository;
+import com.aryaxt.demo.service.models.Repository;
+import com.aryaxt.demo.service.models.User;
 
 public interface IGithubService {
 

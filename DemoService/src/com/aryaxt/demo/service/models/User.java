@@ -1,4 +1,4 @@
-package com.aryaxt.demo.srrvice.models;
+package com.aryaxt.demo.service.models;
 
 import java.io.Serializable;
 
