@@ -36,7 +36,7 @@ public class ContributorsActivity extends RoboActivity {
 		
 		progressBuilder.show("Loading", "Loading contributors please wait...");
 		
-		githubService.GetContributors(repository.getOwner().getLogin(), repository.getName(), new Callback<List<User>>() {
+		githubService.getContributors(repository.getOwner().getLogin(), repository.getName(), new Callback<List<User>>() {
 
 			@Override
             public void failure(RetrofitError error) {

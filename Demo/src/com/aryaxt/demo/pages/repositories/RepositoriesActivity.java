@@ -42,7 +42,7 @@ public class RepositoriesActivity extends RoboActivity {
 		
 		progressBuilder.show("Loading", "Loading repositories please wait...");
 		
-		githubService.GetRepositories(USERNAME, new Callback<List<Repository>>() {
+		githubService.getRepositories(USERNAME, new Callback<List<Repository>>() {
 
 			@Override
             public void failure(RetrofitError error) {

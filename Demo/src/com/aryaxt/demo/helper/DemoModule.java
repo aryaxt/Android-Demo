@@ -5,6 +5,7 @@ import com.aryaxt.demo.service.implementations.RestServiceProvider;
 import com.aryaxt.demo.service.interfaces.IGithubService;
 import com.aryaxt.demo.service.interfaces.IRestServiceProvider;
 import com.google.inject.AbstractModule;
+import com.google.inject.Singleton;
 
 public class DemoModule extends AbstractModule {
 
@@ -18,7 +19,7 @@ public class DemoModule extends AbstractModule {
 		bind(IIntentProxy.class).to(IntentProxy.class);
 		
 		// Services
+		bind(IRestServiceProvider.class).to(RestServiceProvider.class).in(Singleton.class);
 		bind(IGithubService.class).to(GithubService.class);
-		bind(IRestServiceProvider.class).to(RestServiceProvider.class);
 	}
 }
